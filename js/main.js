@@ -24,19 +24,20 @@ function classifyAPoint(arr, n, k, p) {
   let freq1 = 0;
   let freq2 = 0;
 
-  const sorted = document.getElementById('sort');
+  //const sorted = document.getElementById('sort');
 
   for (let i = 0; i < k; i++) {
-    console.log(i + 1 + '/' + k);
-    console.log('val: ' + arr[i].val);
-    if (i != k - 1) sorted.innerHTML = sorted.innerHTML + arr[i].val + ', ';
-    else sorted.innerHTML = sorted.innerHTML + arr[i].val;
+    // Menampilkan tetangga terdekat
+    // console.log(i + 1 + '/' + k);
+    // console.log('val: ' + arr[i].val);
+    // if (i != k - 1) sorted.innerHTML = sorted.innerHTML + arr[i].val + ', ';
+    // else sorted.innerHTML = sorted.innerHTML + arr[i].val;
 
     if (arr[i].val == 0) freq1++;
     else if (arr[i].val == 1) freq2++;
   }
 
-  return freq1 > freq2 ? 'Irit' : 'Boros';
+  return freq1 > freq2 ? 'IRIT' : 'BOROS';
 }
 
 function main() {
@@ -217,9 +218,10 @@ function main() {
 
   let ans = classifyAPoint(arr, n, k, p);
   const jawaban = document.getElementById('ans');
-  jawaban.innerHTML = 'Jawaban = ' + ans;
-  if (ans == 'Boros') jawaban.style.backgroundColor = 'red';
-  else jawaban.style.backgroundColor = 'green';
+  jawaban.innerHTML = ans;
+  if (ans == 'BOROS') {
+    jawaban.style.backgroundColor = 'red';
+  } else jawaban.style.backgroundColor = 'green';
 
   console.log('Pengeluaran Uang Saku Termasuk' + ': ' + ans + '\n');
 }
