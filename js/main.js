@@ -46,8 +46,38 @@ function main() {
   // x -> jumlah pemasukan uang saku
   // y -> Pengeluaran perbulan
   // z -> Keperluan (1=penting, 2=cukup penting, 3=tidak penting)
-  // val -> klasifikasi (0=boros, 1=irit)
+  // val -> klasifikasi (0=irit, 1=boros)
   let arr = [
+    {
+      x: 300,
+      y: 250,
+      z: 3,
+      val: 0,
+    },
+    {
+      x: 400,
+      y: 300,
+      z: 1,
+      val: 0,
+    },
+    {
+      x: 400,
+      y: 350,
+      z: 2,
+      val: 1,
+    },
+    {
+      x: 450,
+      y: 400,
+      z: 3,
+      val: 1,
+    },
+    {
+      x: 350,
+      y: 300,
+      z: 3,
+      val: 1,
+    },
     {
       x: 1400,
       y: 800,
@@ -84,6 +114,13 @@ function main() {
     },
 
     {
+      x: 370,
+      y: 400,
+      z: 3,
+      val: 1,
+    },
+
+    {
       x: 500,
       y: 300,
       z: 2,
@@ -102,6 +139,27 @@ function main() {
       y: 800,
       z: 1,
       val: 0,
+    },
+
+    {
+      x: 450,
+      y: 350,
+      z: 1,
+      val: 0,
+    },
+
+    {
+      x: 350,
+      y: 300,
+      z: 1,
+      val: 0,
+    },
+
+    {
+      x: 250,
+      y: 230,
+      z: 2,
+      val: 1,
     },
 
     {
@@ -140,6 +198,27 @@ function main() {
     },
 
     {
+      x: 300,
+      y: 330,
+      z: 1,
+      val: 1,
+    },
+
+    {
+      x: 350,
+      y: 400,
+      z: 3,
+      val: 1,
+    },
+
+    {
+      x: 350,
+      y: 380,
+      z: 2,
+      val: 1,
+    },
+
+    {
       x: 1000,
       y: 1300,
       z: 3,
@@ -150,6 +229,20 @@ function main() {
       x: 700,
       y: 800,
       z: 2,
+      val: 1,
+    },
+
+    {
+      x: 350,
+      y: 300,
+      z: 1,
+      val: 0,
+    },
+
+    {
+      x: 300,
+      y: 350,
+      z: 3,
       val: 1,
     },
 
@@ -214,7 +307,7 @@ function main() {
 
   console.log('x: ' + p.x + ', y: ' + p.y + ', z: ' + p.z);
 
-  let k = 5;
+  let k = 3;
 
   let ans = classifyAPoint(arr, n, k, p);
   const jawaban = document.getElementById('ans');
